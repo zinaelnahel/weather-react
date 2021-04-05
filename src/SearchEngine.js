@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+
 import axios from "axios";
-export default function SearchEngine() {
-  let [city, setCity] = useState(null);
+export default function SearchEngine(props) {
+  let [city, setCity] = useState(props.defaultCity);
   let [announcement, setAnnouncement] = useState(null);
   function handleSubmit1(event) {
     event.preventDefault();
@@ -18,7 +19,7 @@ export default function SearchEngine() {
       "Wednesday",
       "Thursday",
       "Friday",
-      "Saturday"
+      "Saturday",
     ];
     let day = days[date.getDay()];
     return `${day} ${formatHours(timestamp)}`;

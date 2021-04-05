@@ -1,19 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import SearchEngine from "./SearchEngine";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-       weather react
-        </a>
-      </header>
+      <div className="container">
+        <header className="App-header">
+          <SearchEngine defaultCity="Cairo" />
+          <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            weather react
+          </a>
+        </header>
+      </div>
     </div>
   );
 }
