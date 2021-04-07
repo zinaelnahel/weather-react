@@ -1,25 +1,40 @@
-import logo from "./logo.svg";
+import React from "react";
+import Weather from "./Weather";
 import "./App.css";
-import SearchEngine from "./SearchEngine";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <header className="App-header">
-          <SearchEngine defaultCity="Cairo" />
+        <Weather defaultCity="Cairo" />
+
+        <footer>
+          This project was coded by{" "}
           <a
-            className="App-link"
-            href="https://reactjs.org"
+            href="https://zinaelnahel.github.io/profile/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            weather react
+            Zina El Nahel
+          </a>{" "}
+          and is{" "}
+          <a
+            href="https://github.com/zinaelnahel/weather-react"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            open-sourced on GitHub
+          </a>{" "}
+          and{" "}
+          <a
+            href="https://www.netlify.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            hosted on Netlify
           </a>
-        </header>
+        </footer>
       </div>
     </div>
   );
 }
-
-export default App;
